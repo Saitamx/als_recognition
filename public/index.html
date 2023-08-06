@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello World Gesture Recognition</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #f5f5f5;
+      }
+      #canvas-container {
+        position: relative;
+      }
+      #info-box {
+        font-size: 1rem;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background: rgba(255, 255, 255, 0.8);
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        width: 200px; /* Ancho del cuadro */
+      }
+      table {
+        width: 100%;
+      }
+      th,
+      td {
+        padding: 5px;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="canvas-container">
+      <div id="info-box">
+        <table>
+          <tr>
+            <th>Letter:</th>
+            <td id="letter"></td>
+          </tr>
+          <tr>
+            <th>H</th>
+            <td id="h-confidence"></td>
+          </tr>
+          <tr>
+            <th>O</th>
+            <td id="o-confidence"></td>
+          </tr>
+          <tr>
+            <th>L</th>
+            <td id="l-confidence"></td>
+          </tr>
+          <tr>
+            <th>A</th>
+            <td id="a-confidence"></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
